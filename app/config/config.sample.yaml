@@ -1,0 +1,40 @@
+CACHE_TIMEOUT: 7200
+DATABASES:
+  default:
+    ENGINE: django.db.backends.mysql
+    HOST: localhost
+    NAME: cycling
+    PASSWORD:
+    USER:
+  cycling:
+    ENGINE: django.db.backends.mysql
+    HOST: localhost
+    NAME: cycling
+    PASSWORD:
+    USER:
+DEBUG: true
+EMAILS:
+- email@email.com
+LOGGING:
+  app_name: portfolio-api
+  format: '%(name)s: %(levelname)s %(message)s'
+  handlers:
+    file:
+      filename: /tmp/_log
+    standard:
+      stream: stdout
+    syslog:
+      address: /dev/log
+      facility: local0
+    use: file
+  level: DEBUG
+REDIS:
+  cluster: false
+  hosts:
+  - host: localhost
+    port: 6379
+  prefix: portfolio-api-dev
+SECRET_KEY: django-insecure-fnhv*15&etn=7yus#3zzxl$r24@h5^tt4!t4k0h*5lb(9z&d%8
+SHOW_HOSTNAME: true
+lock_max_retries: 30
+task_lock_time: 1800
